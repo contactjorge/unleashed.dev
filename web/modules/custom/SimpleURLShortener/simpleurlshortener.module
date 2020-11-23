@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Uses the bit.ly API to create a simple url shortener.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+
+/**
+ * Implements hook_help().
+ */
+function simpleurlshortener_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name == 'help.page.token') {
+    $output = '<h3>' . t('About') . '</h3>';
+    $output .= '<p>' . t('The <a href=":project">SimpleURLShortener</a> module provides a simple url shortener using bit.ly API.') . '</p>';
+    $output .= '<h3>' . t('Uses') . '</h3>';
+    $output .= '<p>' . t('The bitly API.') . '</p>';
+    $output .= '<dl>';
+    $output .= '<dt>' . t('The list of the currently available tokens on this site are shown below.') . '</dt>';
+    $output .= '</dl>';
+    return $output;
+  }
+}

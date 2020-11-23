@@ -1,0 +1,9 @@
+simpleurlshortener:
+  version: VERSION
+  js:
+    js/simpleurlshortener.js: {}
+  css:
+    component:
+      css/simpleurlshortener.css: {}
+  dependencies:
+    - core/drupal
